@@ -1,1 +1,1 @@
-https://github.com/HakerStone/FirstProject.git
+https://github.com/HakerStone/ono-tebe-nado.git
