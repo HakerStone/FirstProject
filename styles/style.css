@@ -1,8 +1,7 @@
-/* место для вашего кода */
 body {
     margin: 0;
     padding: 0;
-	background-color:#778899;
+	max-width:auto;
 }    
 
 .header {
@@ -27,8 +26,35 @@ body {
 }
 
 .header__link_active {
+	position: relative;
+	cursor: pointer;
     text-decoration: none;
 }
+/*анимация для текста*/
+.header__link_active:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s;
+}
+
+.header__link_active:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s;
+}
+/**/
 
 .header__logo {
     display: block;
@@ -57,22 +83,21 @@ body {
     align-items: start;
     padding-top: 5px;
     gap: 2px;
-	color:white;
+	color:black;
 }
 
 .address__link {
     text-decoration: none;
-    border-bottom: #115e53e6 solid 1px;
+    border-bottom: black solid 1px;
 }
 
 .cover {
     margin: auto;
-    min-height: 753px;
     background-image: url(../images/cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 .overlay {
@@ -109,7 +134,7 @@ body {
     margin: 0 36px 0 0;
   }
   
-  .cover__text_align_right {
+.cover__text_align_right {
     text-align: end;
     padding: 0 0 10px 0;
     letter-spacing: 60px;
@@ -120,11 +145,11 @@ body {
     letter-spacing: 30px;
 }
 
-  .cover__text-letter-space {
+.cover__text-letter-space {
     letter-spacing: 60px;
   }
 
-  .cover_text_no-letter-space {
+.cover_text_no-letter-space {
     letter-spacing: 0;
   }
 
@@ -147,7 +172,6 @@ body {
 }
 
 .bet-button {
-    position: absolute;
     bottom: 45px;
     right: 50px;
     color:#FFF;
@@ -160,6 +184,7 @@ body {
     border: 1px solid #FFF;
     z-index: 2;
     word-spacing: 12px;
+	cursor: pointer;
 }
 
 .lots__heading {
@@ -180,7 +205,7 @@ body {
 
 .lots__card-list-item {
     width: 430px;
-    height: 450px;
+    min-height: 450px;
     flex-grow: 1;
 }
 
@@ -299,17 +324,15 @@ body {
 
 .footer {
     display: flex;
-    margin: 0 50px 90px;
-    border: 1px white solid;
+    padding: 0 50px 90px;
     justify-content: space-between;
-	background-color:black;
+	background-color:white;
 }
 
 .footer__menu {
     align-self: center;
-    border: 1px black solid;
     padding-bottom: 25px;
-	color:white;
+	color:black;
 }
 
 .footer__menu-list {
