@@ -203,17 +203,6 @@
 	cursor: pointer;
 }
 
-/*Анимация кнопки*/
-.bet-button:hover {
-	animation: button 8s linear infinity;
-}
-
-.bet-button:after {
-	content: "";
-    position: absolute;
-}
-/**/
-
 .lots {
     padding: 0 50px;
 }
